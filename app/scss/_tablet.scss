@@ -1,0 +1,15 @@
+/* Tablet and above
+-----------------------------------------------*/
+@media (min-width: 768px) {
+.logo {
+  padding: 4rem 0rem;
+}
+
+  .container {
+    margin: 3rem auto;
+  }
+
+.type {
+  flex-basis: 33.3%;
+}
+ }

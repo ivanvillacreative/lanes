@@ -1,5 +1,6 @@
 @import  'normalize';
 
+
 $lightGray: #9b9b9b;
 $primary: #ff8f6f;
 $darkGray: #4A4A4A;
@@ -14,6 +15,9 @@ $progress:#5F71DF;
 //Font Stack
 $display: 'Montserrat', sans-serif;
 $body: 'Source Sans Pro', sans-serif;
+
+//efault border radius
+$radius:3px;
 
 
 body
@@ -65,30 +69,23 @@ header
   flex: 1 100%;
 
 }
-@media (min-width: 900px) {
-.logo {
-  padding: 4rem 0rem;
-}
 
-  .container {
-    margin: 3rem auto;
-  }
 
-.type {
-  flex-basis: 33.3%;
-}
- }
-
+/* Cards
+-------------------------------------*/
 
 .card {
   cursor: pointer;
-  border-radius: 3px;
-  min-height: 130px;
+  border-radius: $radius;
   margin: 1rem;
+  padding-right: .7rem;
   position: relative;
+  transition: 300ms;
   div {
     background: white;
-    position: absolute;
+    min-height: 130px;
+    overflow: hidden;
+    position: relative;
     top:0px;
     bottom: 0px;
     left:0px;
@@ -123,7 +120,7 @@ header
   @include card-color($progress);
 }
 
-.cardStatus {
+.card__status {
   font-family: $display;
   text-transform: uppercase;
   font-size: .8rem;
@@ -131,18 +128,66 @@ header
   right: .4rem;
   bottom: .5rem;
 }
+/* Modal
+-------------------------------------*/
+.modal {
+  border-radius:$radius;
+  margin: 1rem;
+  position: absolute;
+  z-index: 300;
+  top: 0;
+  color: white;
+}
+
+.modal__mainArea {
+  background: white;
+  padding: 1rem;
+  color: $darkGray;
+}
+
+.modal__title {
+  text-transform: uppercase;
+  font-family: $display;
+  font-size: .8rem;
+}
+
+.modal__status {
+  font-family: $display;
+  text-transform: uppercase;
+  position: absolute;
+  right: .4rem;
+  bottom: .5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+
+
+.modal__statusArea {
+  margin: 0 0 2rem 0;
+  padding: 1rem;
+}
+
+.overlay {
+  cursor: pointer;
+  background: rgba(255,255,255,.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 
 /* Footer
 -------------------------------------*/
-footer
-{
-    width: 100%;
-    background: linear-gradient(
-    to right,
-    #ff5f6d, #ffc371
-    );
-    color: white;
-    text-align: center;
+footer {
+  width: 100%;
+  background: linear-gradient(
+  to right,
+  #ff5f6d, #ffc371
+  );
+  color: white;
+  text-align: center;
 }
 
 .request {
@@ -158,3 +203,5 @@ footer
   font-size: .8rem;
   padding: 1rem;
 }
+
+@import 'tablet';
