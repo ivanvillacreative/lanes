@@ -20,164 +20,51 @@
     <header>
         <div id="appName" class="logo">lanes</div>
     </header>
-    <div class="container">
+    <div id="lanes" class="container">
         <div class="type">
-          <div class="typeHeader">
-            <h2>Updates &amp; Maintenance</h2>
-            <p>Updated to Text, swap in new Photos</p>
-          </div>
-            <div class="card waiting">
+            <div class="typeHeader">
+              <h2>Updates &amp; Maintenance</h2>
+              <p>Updated to Text, swap in new Photos</p>
+            </div>
+
+            <div v-for="card in cards | filterBy 'updates' in 'type' " class="card {{ card.status }}">
                 <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">waiting</span>
+                    <h4>{{ card.title }}</h4>
+                    <p>{{ card.description }}</p>
+                    <span class="card__status">{{ card.status }}</span>
                 </div>
             </div>
-            <div class="card progress">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">In Progress</span>
-                </div>
-            </div>
-            <div class="card progress">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">In Progress</span>
-                </div>
-            </div>
-            <div class="card review">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">review</span>
-                </div>
-            </div>
-            <div class="card backlog">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">backlog</span>
-                </div>
-            </div>
-            <div class="card backlog">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">backlog</span>
-                </div>
-            </div>
-            <div class="card backlog">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">Backlog</span>
-                </div>
-            </div>
-            <div class="card backlog">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">Backlog</span>
-                </div>
-            </div>
+
         </div>
         <div class="type">
-          <div class="typeHeader">
-            <h2>Projects</h2>
-            <p>Bring long term value or improve operations</p>
-          </div>
-            <div class="card progress">
+            <div class="typeHeader">
+              <h2>Projects</h2>
+              <p>Larger sustainable brand</p>
+            </div>
+
+            <div v-for="card in cards | filterBy 'projects' in 'type' " class="card {{ card.status }}">
                 <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">In Progress</span>
+                    <h4>{{ card.title }}</h4>
+                    <p>{{ card.description }}</p>
+                    <span class="card__status">{{ card.status }}</span>
                 </div>
             </div>
-            <div class="card progress">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">In Progress</span>
-                </div>
-            </div>
-            <div class="card queue">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">queue</span>
-                </div>
-            </div>
-            <div class="card queue">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">queue</span>
-                </div>
-            </div>
-            <div class="card backlog">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">backlog</span>
-                </div>
-            </div>
+
         </div>
         <div class="type">
           <div class="typeHeader">
             <h2>Promos &amp; Campaigns</h2>
             <p>Push awareness of new things, quick boosts</p>
           </div>
-            <div class="card progress">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">In Progress</span>
-                </div>
-            </div>
-            <div class="card progress">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">In Progress</span>
-                </div>
-            </div>
-            <div class="card review">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">review</span>
-                </div>
-            </div>
-            <div class="card backlog">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">backlog</span>
-                </div>
-            </div>
-            <div class="card backlog">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">backlog</span>
-                </div>
-            </div>
-            <div class="card backlog">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">Backlog</span>
-                </div>
-            </div>
-            <div class="card backlog">
-                <div>
-                    <h4>Franchisee PowerPoint and brochure</h4>
-                    <p>Cor sociis natoque penatibus et magnis dis parturient montes, nascetur…</p>
-                    <span class="card__status">Backlog</span>
-                </div>
-            </div>
+
+          <div v-for="card in cards | filterBy 'promos' in 'type' | orderBy 'status' 'title' -1 " class="card {{ card.status }}">
+              <div>
+                  <h4>{{ card.title }}</h4>
+                  <p>{{ card.description }}</p>
+                  <span class="card__status">{{ card.status }}</span>
+              </div>
+          </div>
+
         </div>
     </div>
 

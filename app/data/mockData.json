@@ -61,7 +61,7 @@
       "title": "Bike Mount video custom",
       "description": "vestibulum at eros. Maecenas faucibus mollis interdum. Nulla vestibulum at eros. vitae elit libero, a pharetra augue. Donec sed odio dui.",
       "type": "promos",
-      "status": "backlog"
+      "status": "review"
     },
     {
       "id": 109,
@@ -93,7 +93,7 @@
     },
     {
       "id": 113,
-      "title": "MEnu Board Update",
+      "title": "Menu Board Update",
       "description": " Maecenas faucibus mollis interdum. Nulltibulum at eros. vitae elit libero, a pharetra augue. Donec sed odio dui.",
       "type": "promos",
       "status": "in progress"
