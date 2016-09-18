@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:300,400" rel="stylesheet">
 </head>
 
-<body>
+<body id="body">
     <header>
         <div id="appName" class="logo">lanes</div>
     </header>
@@ -27,7 +27,7 @@
               <p>Updated to Text, swap in new Photos</p>
             </div>
 
-            <div v-for="card in cards | filterBy 'updates' in 'type' " class="card {{ card.status }}">
+            <div v-for="card in cards | filterBy 'updates' in 'type' | orderBy logs " class="card {{ card.status }}">
                 <div>
                     <h4>{{ card.title }}</h4>
                     <p>{{ card.description }}</p>
@@ -42,7 +42,7 @@
               <p>Larger sustainable brand</p>
             </div>
 
-            <div v-for="card in cards | filterBy 'projects' in 'type' " class="card {{ card.status }}">
+            <div v-for="card in cards | filterBy 'projects' in 'type' | orderBy logs " class="card {{ card.status }}">
                 <div>
                     <h4>{{ card.title }}</h4>
                     <p>{{ card.description }}</p>
@@ -57,7 +57,7 @@
             <p>Push awareness of new things, quick boosts</p>
           </div>
 
-          <div v-for="card in cards | filterBy 'promos' in 'type' | orderBy 'status' 'title' -1 " class="card {{ card.status }}">
+          <div v-for="card in cards | filterBy 'promos' in 'type' | orderBy logs " class="card {{ card.status }}">
               <div>
                   <h4>{{ card.title }}</h4>
                   <p>{{ card.description }}</p>
@@ -100,3 +100,9 @@
 </body>
 
 </html>
+
+<?php
+
+$dog = "" ''
+
+?>

@@ -28,6 +28,11 @@ body
     -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  opacity: 0;
+  transition: 500ms;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-family: $display;
   color: $darkGray;

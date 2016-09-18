@@ -22,10 +22,27 @@
   function build(obj){
     var lanes = new Vue({
         el: '#lanes',
-        data:obj
+        data:obj,
+        methods:{
+          logs: function(a,b){
+            var sort = {
+              backlog:0,
+              review:1,
+              "in progress":2,
+              waiting:3
+            }
+             return sort[b.status] - sort[a.status];
+          }
+        }
     });
+    appReady();
   }
 
+  //fade in appl when ready
+  function appReady() {
+    var app = document.getElementById('body');
+    app.style.opacity="1";
+  }
 
 
   // Kick Off Application
